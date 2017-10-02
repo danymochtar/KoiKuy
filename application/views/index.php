@@ -93,8 +93,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="content-style-form content-style-form-1">
 									<span class="icon icon-close">Tutup</span>
 									<h2>Masuk</h2>
-									<form>
-										<p><label>Email</label><input type="text" /></p>
+									<form method="post" action="<?php echo base_url().'index.php/akun/cek_login'?>">
+										<p><label>Username</label><input type="text" /></p>
 										<p><label>Password</label><input type="password" /></p>
 										<p><button>Masuk</button></p>
 									</form>
@@ -111,9 +111,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<span class="icon icon-close">Tutup</span>
 									<h2>Daftar</h2>
 									<form>
+										<p>Silahkan anda isi email Anda berikut ini</p>
 										<p><label>Email</label><input type="text" /></p>
-										<p><label>Password</label><input type="password" /></p>
-										<p><label>Ulangi Password</label><input type="password" /></p>
 										<p><button>Daftar</button></p>
 									</form>
 								</div>

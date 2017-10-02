@@ -14,20 +14,6 @@ class Tanya_koi extends CI_Controller {
 		$this->load->view('view_login');
 	}
 	
-	public function cek_Login()
-	{	
-		$this->load->helper('url');
-		$username = $this->input->post('username',true);
-        $password = $this->input->post('psw',true);
-        
-			
-		 $this->load->model('model_daftar');
-		 if ($this->model_daftar->cek_login_data($username,$password)) {
-			 redirect('/akun');
-				
-		 } else {
-			 echo 'salah password';
-		 }
-	}
+
 	
 }
