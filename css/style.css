@@ -242,90 +242,6 @@ a:focus {
 	line-height: 1.5;
 }
 
-/* Codrops header */
-
-.codrops-header {
-	padding: 0.185em 0.5em;
-	width: calc(100% - 4em);
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.codrops-header__title {
-	font-size: 1em;
-	font-weight: 500;
-	margin: 0;
-	padding: 0 0.75em;
-}
-
-
-/* Top Navigation Style */
-
-.codrops-links {
-	position: relative;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	text-align: center;
-	white-space: nowrap;
-	margin: 0.5em 0;
-}
-
-.codrops-links::after {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	width: 1px;
-	height: 80%;
-	background: currentColor;
-	opacity: 0.2;
-	content: '';
-	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
-	transform: rotate3d(0, 0, 1, 22.5deg);
-}
-
-.codrops-icon {
-	display: inline-block;
-	margin: 0.25em;
-	padding: 0.25em;
-}
-
-/* Demo links */
-
-.codrops-demos {
-	margin: 0 0 0 auto;
-}
-
-.codrops-demos a {
-	font-weight: 700;
-	font-size: 0.65em;
-	line-height: 1;
-	display: inline-block;
-	margin: 0 2em 0 0;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-
-.codrops-demos a.current-demo {
-	opacity: 0.5;
-}
-
-
 /**********************************/
 /* All transitions and animations */
 /**********************************/
@@ -603,16 +519,6 @@ a:focus {
 /* Media queries */
 
 @media screen and (max-width: 50em) {
-	.codrops-demos {
-		margin: 0 0 0 0.5em;
-		width: 100%;
-	}
-	.codrops-demos::after {
-		display: inline-block;
-		margin: 1em 0 0 0;
-		font-weight: bold;
-		color: #fff;
-	}
 	.landing-header__title {
 		font-size: 2.5em;
 	}
@@ -642,12 +548,6 @@ a:focus {
 	}
 	.button {
 		font-size: 0.5em;
-	}
-	.codrops-header {
-		font-size: 0.75em;
-	}
-	.codrops-header__title {
-		padding: 0;
 	}
 	.loader::after {
 		font-size: 1em;
