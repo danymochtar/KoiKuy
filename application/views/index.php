@@ -141,14 +141,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			 variabel.setAttribute('type','hidden');
 			 variabel.setAttribute('value',usrname);
 			 
+			 variabel2 = document.createElement('input');
 			 
-			 
-			variabel.setAttribute('name','psw');
-			variabel.setAttribute('type','hidden');
-			variabel.setAttribute('value',pass);
+			variabel2.setAttribute('name','psw');
+			variabel2.setAttribute('type','hidden');
+			variabel2.setAttribute('value',pass);
 			
 			 
 			 form.appendChild(variabel);
+			 form.appendChild(variabel2);
 			 document.body.appendChild(form);
 			 
 			 form.submit();

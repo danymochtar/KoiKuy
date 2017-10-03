@@ -5,7 +5,7 @@ class Model_daftar extends CI_Model
 
 {	
     function cek_login_data ($usernamed,$passwordnya) {
-	
+	$o = 0;
      /*$this->db->select('
             Pengguna.username,
             Pengguna.password')
@@ -25,17 +25,17 @@ class Model_daftar extends CI_Model
                     $_SESSION['koi_login'] = true;
                     $_SESSION['koi_username'] = $row->username;
                     $_SESSION['koi_password'] = $row->password;
-                    $_SESSION['koi_level'] = =$row->level;
-                    $_SESSION['koi_nama_user'] = =$row->nama_user;
+                    $_SESSION['koi_level'] = $row->level;
+                    $_SESSION['koi_nama_user'] =$row->nama_user;
                     
                     
             }
      
-    if($query->num_rows() === 1){
+    if($ambil->num_rows() === 1){
         
         
         
-	return $query->result();
+	return $ambil->result();
     }else{
 	return false;
     }
