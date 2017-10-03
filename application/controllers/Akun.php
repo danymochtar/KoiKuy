@@ -11,7 +11,7 @@ class Akun extends CI_Controller {
 	function sudah_login () {
 		
 		
-		
+		//konten siapa dia usernya
 		return true;
 	}
 	
@@ -111,8 +111,14 @@ class Akun extends CI_Controller {
 		 }
 	 }
 	
+        public function cek_email () {
+			
+			//email ke mereka terus klik supaya daftar ke tanya_koi
+			
+		}
         
-        	public function cek_Login()
+        
+        public function cek_Login()
 {	
 		$this->load->helper('url');
 		$username = $this->input->post('username',true);
@@ -122,6 +128,8 @@ class Akun extends CI_Controller {
 		 $this->load->model('model_daftar');
 		 if ($this->model_daftar->cek_login_data($username,$password)) {
 			 redirect('/akun');
+			 
+			 
 				
 		 } else {
 			 echo 'salah password';

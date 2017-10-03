@@ -93,10 +93,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="content-style-form content-style-form-1">
 									<span class="icon icon-close">Tutup</span>
 									<h2>Masuk</h2>
-									<form method="post" action="<?php echo base_url().'index.php/akun/cek_login'?>">
-										<p><label>Username</label><input type="text" /></p>
-										<p><label>Password</label><input type="password" /></p>
-										<p><button>Masuk</button></p>
+									<form>
+										<p id= "statusnya"> </p>
+										<p><label>Username</label><input type="text" name="username"/></p>
+										<p><label>Password</label><input type="password" name="pwd"/></p>
+										<p><button type="button" onclick="onLogin(this.form)">Masuk</button></p>
 									</form>
 								</div>
 							</div>
@@ -110,17 +111,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="content-style-form content-style-form-2">
 									<span class="icon icon-close">Tutup</span>
 									<h2>Daftar</h2>
-									<form>
+									<form method="post" action="<?php echo base_url().'index.php/akun/cek_email'?>">
 										<p>Silahkan anda isi email Anda berikut ini</p>
 										<p><label>Email</label><input type="text" /></p>
-										<p><button>Daftar</button></p>
+										<p><button type="submit">Daftar</button></p>
 									</form>
-								</div>
+								</div>       
 							</div>
 						</div>
 					</div><!-- morph-button -->
 					</div>
 			</header><!-- /landing-header -->
+			
+			<script>
+				function onLogin(form) {
+			
+			if ((form.username.value == "") || (form.pwd.value == "")) {		
+			 document.getElementById("statusnya").innerHTML = "Silahkan lengkapi Username atau password Anda ..";	
+		 } else {
+			 
+			 var usrname = form.username.value;
+			 var pass = form.pwd.value;
+			 
+			 form = document.createElement('form');
+			 form.setAttribute('method','POST');
+			 form.setAttribute('action','index.php/akun/cek_login');
+			 variabel = document.createElement('input');
+			 variabel.setAttribute('name','username');
+			 variabel.setAttribute('type','hidden');
+			 variabel.setAttribute('value',usrname);
+			 
+			 
+			 
+			variabel.setAttribute('name','psw');
+			variabel.setAttribute('type','hidden');
+			variabel.setAttribute('value',pass);
+			
+			 
+			 form.appendChild(variabel);
+			 document.body.appendChild(form);
+			 
+			 form.submit();
+			 
+		 }
+		 
+			 
+			}
+			</script>
 			<!-- Trigger button for layout change -->
 			<button class="button button--trigger" aria-label="View more">
 				<svg class="icon icon--grid icon--shown"><use xlink:href="#icon-grid"></use></svg>
@@ -335,6 +372,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script src="js/main2.js"></script>
 				<script src="js/uiMorphingButton_fixed.js"></script>
 		<script>
+			
+			
+			
+			
 			(function() {
 				var docElem = window.document.documentElement, didScroll, scrollPosition;
 
